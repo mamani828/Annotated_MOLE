@@ -35,7 +35,7 @@ Once you have a good understanding of the equations, numerical methods and the M
 
 Basically, everything we learned in vector calculus. Divergence, gradient, curl, and Laplacian.
 
-To maintain consistency, we will follow these notations for now (there will be additional terms and notations down the line, we will define them later for brevity).
+To maintain consistency, we will follow these notations for now (there will be additional terms and notations down the line, we will define them later for simplicity).
 
 - Laplacian = L
 
