@@ -96,3 +96,4 @@ Let’s take (a relatively complicated example)
 This is my personal favorite equation. The reformulated time-dependent 2D Schrödinger equation
 ![](images/nondimSchro.png)
 
+1[](images/1Mimeticnonschro.png)
