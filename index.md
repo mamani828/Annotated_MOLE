@@ -1,6 +1,6 @@
 
 
-#  Intro to PDE solving and what is the point of mimetics.
+#  Intro to PDE solving and how to use MOLE.
 
 
 ##  What is a PDE and how to numerically solve it:
