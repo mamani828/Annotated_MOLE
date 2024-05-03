@@ -43,7 +43,7 @@ To maintain consistency, we will follow these notations for now (there will be a
 
 - Curl = C
 
-- D = divergence
+- Divergence = D
 
 So now we have to identify the operators and replace them with the mimetic operators.
 
