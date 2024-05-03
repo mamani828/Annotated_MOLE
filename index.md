@@ -102,6 +102,7 @@ Just like before, we replace the vector calculus operator with our mimetic opera
 
 
 Next step is to see where the calculation is happening. Since Laplacians are on the centers, data is on the centers and the diagonalized functions and scalars are on the centers, we don't need any interpolar functions, spatial discretization is done.
+Also if you are wondering what *i* is, it's just a scalar! an imaginary number but it is still a scalar and MATLAB can handle the computations with ease.
 
 ### Time Discretization
 Now it is time to solve for time. As you can see we are left with an ODE so any time discretization scheme *should* work.
