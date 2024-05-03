@@ -90,3 +90,8 @@ We are going to start off easy at first.
 Let’s take (a relatively complicated example)  
 
 ![](images/image4.png)
+
+## Now a real physical Equation
+
+This is my personal favorite equation. The reformulated time-dependent 2D Schrödinger equation
+
