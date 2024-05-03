@@ -94,4 +94,5 @@ Let’s take (a relatively complicated example)
 ## Now a real physical Equation
 
 This is my personal favorite equation. The reformulated time-dependent 2D Schrödinger equation
+![](images/nondimSchro.png)
 
