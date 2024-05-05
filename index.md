@@ -116,7 +116,7 @@ For this equation, we have a time-dependent Dirichlet boundary condition. After 
 
 We are using a time-independent potential function with this form:
 
-![](images/potemtial.png)
+![](images/potential.png)
 
 In this case, the analytical solution is given by the following:
 
