@@ -110,4 +110,8 @@ Like always it is advised to use higher-order accuracy and energy-conserving num
 
 ### Boundary Conditions
 Imposing boundary conditions:
-For this equation, we have a time-dependent Dirichlet boundary condition. After each time step that the equation is evaluated, we can impose boundary conditions. 
+For this equation, we have a time-dependent Dirichlet boundary condition. After each time step that the equation is evaluated, we can impose boundary conditions. With the given initial conditions, we are ready to simulate.
+
+### Equation parameters
+
+The 
