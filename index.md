@@ -115,5 +115,8 @@ For this equation, we have a time-dependent Dirichlet boundary condition. After 
 ### Equation parameters
 
 We are using a time-independent potential function with this form:
+
+![](images/potemtial.png)
+
 In this case, the analytical solution is given by the following:
 
