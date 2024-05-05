@@ -120,3 +120,4 @@ We are using a time-independent potential function with this form:
 
 In this case, the analytical solution is given by the following:
 
+![](Analytical.png)
