@@ -97,7 +97,9 @@ This is my personal favorite equation. The reformulated time-dependent 2D Schrö
 
 ![](images/nondimSchro.png)
 
+### Domain
 
+We are attempting to solve this in a rectangular domain from 0->1 on both the x and y axes. It is important to know are domain and coordinates to apply the appropriate techniques.
 
 ### Spatial Discretization
 Just like before, we replace the vector calculus operator with our mimetic operators. 
@@ -114,7 +116,7 @@ Like always it is advised to use higher-order accuracy and energy-conserving num
 
 ### Boundary Conditions
 Imposing boundary conditions:
-For this equation, we have a time-dependent Dirichlet boundary condition. After each time step that the equation is evaluated, we can impose boundary conditions. With the given initial conditions, we are ready to simulate.
+For this equation, we have a time-dependent Dirichlet boundary condition.  After each time step that the equation is evaluated, we can impose boundary conditions. With the given initial conditions, we are ready to simulate.
 
 ### Equation parameters
 
@@ -128,8 +130,16 @@ In this case, the analytical solution is given by the following:
 
 Now that we have the analytical solution we can find the initial conditions by setting the variables equal to domain and time conditions. 
 In an actual practical setting, we might not have an analytical solution, then we have to approach the problem from a different angle, however the math remains the same.
+
 Initial Condition:
 
 Boundary Conditions:
+At x=0:
+
+At y=0:
+
+At x=1:
+
+At y+1:
 
 
