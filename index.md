@@ -102,7 +102,7 @@ This is my personal favorite equation. The reformulated time-dependent 2D Schrö
 ### Spatial Discretization
 Just like before, we replace the vector calculus operator with our mimetic operators. 
 
-![](images/1Mimeticnonschro.png)
+![](images/MimeticSchrodinger.png)
 
 
 Next step is to see where the calculation is happening. Since Laplacians are on the centers, data is on the centers and the diagonalized functions and scalars are on the centers, we don't need any interpolar functions, spatial discretization is done.
