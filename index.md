@@ -94,7 +94,8 @@ Let’s take (a relatively complicated example)
 ## Now a real physical Equation
 
 This is my personal favorite equation. The reformulated time-dependent 2D Schrödinger equation
-![equation](https://latex.codecogs.com/svg.latex?-i%20\frac{\partial%20u}{\partial%20t}%20=%20\frac{\partial^2%20u}{\partial%20x^2}%20+%20\frac{\partial^2%20u}{\partial%20y^2}%20+%20\omega(x,%20y)%20u)
+![](images/nondimSchro.png)
+
 
 
 ### Spatial Discretization
