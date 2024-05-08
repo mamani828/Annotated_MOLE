@@ -132,8 +132,11 @@ Now that we have the analytical solution we can find the initial conditions by s
 In an actual practical setting, we might not have an analytical solution, then we have to approach the problem from a different angle, however the math remains the same.
 
 Initial Condition:
+
 ![](images/IC.png)
+
 Boundary Conditions:
+
 ![](images/BC.png)
 
 
