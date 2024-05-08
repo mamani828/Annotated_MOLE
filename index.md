@@ -94,7 +94,10 @@ Let’s take (a relatively complicated example)
 ## Now a real physical Equation
 
 This is my personal favorite equation. The reformulated time-dependent 2D Schrödinger equation
-![](images/nondimSchro.png)
+$$
+-i \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \omega(x, y) u
+$$
+
 ### Spatial Discretization
 Just like before, we replace the vector calculus operator with our mimetic operators. 
 
