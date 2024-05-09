@@ -112,7 +112,7 @@ Also if you are wondering what *i* is, it's just a scalar! an imaginary number b
 
 ### Time Discretization
 Now it is time to solve for time. As you can see we are left with an ODE so any time discretization scheme *should* work.
-Like always it is advised to use higher-order accuracy and energy-conserving numerical schemes. Empirically, RK4 did a good job simulating the model.
+Like always it is advised to use higher-order accuracy and energy-conserving numerical schemes. Empirically, RK4 did a good job simulating the model. However, this might not be the case for the equation you are using. Make sure to theoretically and experimnetally find the best scheme for your problem to ensure an accurate simulation
 
 ### Boundary Conditions
 Imposing boundary conditions:
