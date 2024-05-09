@@ -166,6 +166,9 @@ Compare with these Analytical results:
 
 Very similar, now it is time to calculate the errors. We used an Infinity norm metric here. You can caluclate that by subtracting your simulation with the analyitcal at that time step and save that error metric over time.
 
+Here is a graph of the errors we found:
+
+![](images/Error_over4.png)
 
 
 
