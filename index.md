@@ -149,4 +149,6 @@ Since this is a Dirchilet boundary condition, we can directly insert the values 
 ### Getting results
 This depends on your projects requiremetns. In this case, I plot the results and save it as a video. It results in cool motions.
 Here is some snapshots.
-
+![](images/Analyitcal_Figure_at_Time_0.png)
+![](images/Analyitcal_Figure_at_Time_2.png)
+![](images/Analyitcal_Figure_at_Time_4.png)
