@@ -150,9 +150,9 @@ Since this is a Dirchilet boundary condition, we can directly insert the values 
 This depends on your projects requiremetns. In this case, I plot the results and save it as a video. It results in cool motions.
 Here is some snapshots.
 <div style="display: flex; justify-content: center;">
-    <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 1" style="width: 30%; margin-right: 10px;">
-    <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 2" style="width: 30%; margin-right: 10px;">
-    <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 3" style="width: 30%;">
+    <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 1" style="width: 55%; margin-right: 10px;">
+    <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 2" style="width: 55%; margin-right: 10px;">
+    <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 3" style="width: 55%;">
 </div>
 
 
