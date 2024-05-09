@@ -139,4 +139,14 @@ In an actual practical setting, we might not have an analytical solution, then w
 
 ![](images/BC.png)
 
+### Time solving for loop.
+As mentioned before, the spatial discretization is complete.
+Now is the time for the for loop to calculate the time integral. 
+In this scenario, we use RK4 to solve the time integral. In some snecarios and conditions different time ingtegrals may or may not work. In my experience in this equation, forward Euler and backward Euler did not work well but RK4 was able to simulate it pretty well.
+However this only works if the data structre is a 1D vector. We have to take our domain and reshape it into a matrix. (How to do that depends on the language you are coding with but it is a very standard task)
+Since this is a Dirchilet boundary condition, we can directly insert the values on the boundaries of our matrix. However, we are in vector form. We have to reshape back into our original matrix form.
+
+### Getting results
+This depends on your projects requiremetns. In this case, I plot the results and save it as a video. It results in cool motions.
+Here is some snapshots.
 
