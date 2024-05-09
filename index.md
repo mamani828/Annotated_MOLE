@@ -157,11 +157,16 @@ Here is some snapshots.
 </div>
 
 
-Compare with these Analytical results
+Compare with these Analytical results:
 <div style="display: flex; justify-content: center;">
     <img src="images/Analytical_Figure_at_Time_0.png" alt="Image 1" style="width: 45%; margin-right: 10px;">
     <img src="images/Analytical_Figure_at_Time_2.png" alt="Image 2" style="width: 45%; margin-right: 10px;">
     <img src="images/Analytical_Figure_at_Time_4.png" alt="Image 3" style="width: 45%;">
 </div>
+
+Very similar, now it is time to calculate the errors. We used an Infinity norm metric here. You can caluclate that by subtracting your simulation with the analyitcal at that time step and save that error metric over time.
+
+
+
 
 
