@@ -129,7 +129,11 @@ Like always it is advised to use higher-order accuracy and energy-conserving num
 ### Boundary Conditions
 Imposing boundary conditions:
 For this equation, we have a time-dependent Dirichlet boundary condition.  After each step in which the equation is evaluated, we can impose boundary conditions. With the given initial conditions, we are ready to simulate.
+
+
 The main idea is to turn quantities from vectors to a square matrix form to be able to impose the boundary condition on that time step.
+
+
 If the PDE is time-independent, use the "RobinBC" operator in the MOLE library and just apply it.
 a,b params when a-= 1, b = 0 is Dirichlet, a = 0 b = 1 Neumann
 a= 1 b =1 robin and the value of the RHS should be included in the forcing term of the time-independent PDE.
