@@ -86,11 +86,17 @@ Let's define some other terms: we have the centers (in red dots) we have nodes (
 For a rule of thumb we can follow these properties that the operators have, they will come in handy when we formulate any mimetic discretization of any PDE since we would need to interpolate.
 
 Faces = blues + greens
+
 Centers = reds + blues on the boundary + greens on the boundary + corners of the domain
+
 Nodes = the vertices of all cells
+
 Works only for curvilinear coordinates. 
+
 Gradient: takes the data from the center to the blue and greens
+
 Divergence: takes data from blues and greens to the center
+
 Laplacian: remains in the center.
 
 
@@ -134,7 +140,7 @@ For this equation, we have a time-dependent Dirichlet boundary condition.  After
 The main idea is to turn quantities from vectors to a square matrix form to be able to impose the boundary condition on that time step.
 
 
-If the PDE is time-independent, use the "RobinBC" operator in the MOLE library and just apply it.
+To make syntax and implementation a bit easier, if the PDE is time-independent, use the "RobinBC" operator in the MOLE library and just apply it.
 a,b params when a-= 1, b = 0 is Dirichlet, a = 0 b = 1 Neumann
 a= 1 b =1 robin and the value of the RHS should be included in the forcing term of the time-independent PDE.
 
