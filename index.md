@@ -75,13 +75,24 @@ Here we introduce new terms and ideas.
 
 ### Interpolers and the staggered grid.
 
-The idea of discretization in mimetics is to create a rectangular grid (or at least transformable to rectangular). And certain operations work on certain parts of the grid. This is a functional tutorial on how to solve PDEs using the MOLE library and mimetic concepts so I will not dive into the why. If you are interested in the theory, I refer you to the many works published in this field.
+The idea of discretization in mimetics is to create a rectangular grid (or at least transformable to rectangular). And certain operations work on certain parts of the grid. This is a functional tutorial on how to solve PDEs using the MOLE library and mimetic concepts so I will not dive into the why. If you are interested in the theory, I would like to refer you to the many works published in this field.
 
 This is a staggered grid.
 
 Let's define some other terms: we have the centers (in red dots) we have nodes (the intersection between lines) and we have the faces(the lines)
 
 ![](images/image5.png)
+
+For a rule of thumb we can follow these properties that the operators have, they will come in handy when we formulate any mimetic discretization of any PDE since we would need to interpolate.
+
+Faces = blues + greens
+Centers = reds + blues on the boundary + greens on the boundary + corners of the domain
+Nodes = the vertices of all cells
+Works only for curvilinear coordinates. 
+Gradient: takes the data from the center to the blue and greens
+Divergence: takes data from blues and greens to the center
+Laplacian: remains in the center.
+
 
 Understanding an equation and its mimetic formulation:
 
@@ -112,11 +123,16 @@ Also if you are wondering what *i* is, it's just a scalar! an imaginary number b
 
 ### Time Discretization
 Now it is time to solve for time. As you can see we are left with an ODE so any time discretization scheme *should* work.
-Like always it is advised to use higher-order accuracy and energy-conserving numerical schemes. Empirically, RK4 did a good job simulating the model. However, this might not be the case for the equation you are using. Make sure to theoretically and experimnetally find the best scheme for your problem to ensure an accurate simulation
+Like always it is advised to use higher-order accuracy and energy-conserving numerical schemes. Empirically, RK4 did a good job simulating the model. However, this might not be the case for the equation you are using. Make sure to theoretically and experimentally find the best scheme for your problem to ensure an accurate simulation.
+
 
 ### Boundary Conditions
 Imposing boundary conditions:
-For this equation, we have a time-dependent Dirichlet boundary condition.  After each time step that the equation is evaluated, we can impose boundary conditions. With the given initial conditions, we are ready to simulate.
+For this equation, we have a time-dependent Dirichlet boundary condition.  After each step in which the equation is evaluated, we can impose boundary conditions. With the given initial conditions, we are ready to simulate.
+The main idea is to turn quantities from vectors to a square matrix form to be able to impose the boundary condition on that time step.
+If the PDE is time-independent, use the "RobinBC" operator in the MOLE library and just apply it.
+a,b params when a-= 1, b = 0 is Dirichlet, a = 0 b = 1 Neumann
+a= 1 b =1 robin and the value of the RHS should be included in the forcing term of the time-independent PDE.
 
 ### Equation parameters
 
@@ -129,7 +145,7 @@ In this case, the analytical solution is given by the following:
 ![](images/analyticalsol.png)
 
 Now that we have the analytical solution we can find the initial conditions by setting the variables equal to domain and time conditions. 
-In an actual practical setting, we might not have an analytical solution, then we have to approach the problem from a different angle, however the math remains the same.
+In an actual practical setting, we might not have an analytical solution, then we have to approach the problem from a different angle, however, the math remains the same.
 
 **Initial Condition**:
 
@@ -142,13 +158,13 @@ In an actual practical setting, we might not have an analytical solution, then w
 ### Time solving for loop.
 As mentioned before, the spatial discretization is complete.
 Now is the time for the for loop to calculate the time integral. 
-In this scenario, we use RK4 to solve the time integral. In some snecarios and conditions different time ingtegrals may or may not work. In my experience in this equation, forward Euler and backward Euler did not work well but RK4 was able to simulate it pretty well.
-However this only works if the data structre is a 1D vector. We have to take our domain and reshape it into a matrix. (How to do that depends on the language you are coding with but it is a very standard task)
-Since this is a Dirchilet boundary condition, we can directly insert the values on the boundaries of our matrix. However, we are in vector form. We have to reshape back into our original matrix form.
+In this scenario, we use RK4 to solve the time integral. In some scenarios and conditions different time integrals may or may not work. In my experience in this equation, forward Euler and backward Euler did not work well but RK4 was able to simulate it pretty well.
+However, this only works if the data structure is a 1D vector. We have to take our domain and reshape it into a matrix. (How to do that depends on the language you are coding with but it is a very standard task)
+Since this is a Dirichlet boundary condition, we can directly insert the values on the boundaries of our matrix. However, we are in vector form. We have to reshape back into our original matrix form.
 
 ### Getting results
-This depends on your projects requiremetns. In this case, I plot the results and save it as a video. It results in cool motions.
-Here is some snapshots.
+This depends on your project's requirements. In this case, I plot the results and save them as a video. It results in cool motions.
+Here are some snapshots.
 
 <div style="display: flex; justify-content: center;">
     <img src="images/Figure_at_Time_0.png" alt="Image 1" style="width: 45%; margin-right: 10px;">
@@ -164,7 +180,7 @@ Compare with these Analytical results:
     <img src="images/Analytical_Figure_at_Time_4.png" alt="Image 3" style="width: 45%;">
 </div>
 
-Very similar, now it is time to calculate the errors. We used an Infinity norm metric here. You can caluclate that by subtracting your simulation with the analyitcal at that time step and save that error metric over time.
+Very similar, now it is time to calculate the errors. We used an Infinity norm metric here. You can calculate that by subtracting your simulation with the analytical at that time step and saving that error metric over time.
 
 Here is a graph of the errors we found:
 
